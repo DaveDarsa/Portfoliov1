@@ -1,10 +1,66 @@
 import React from "react";
 import { TransitionVariants } from "../animations/PageTransitions";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import styled from "styled-components";
+import SliderWatcher from "../util/SliderWatcher";
+
+const TransitionElemVars = {
+  initial: {
+    x: "-101vw",
+  },
+  animate: {
+    x: "100vw",
+    transition: {
+      type: "spring",
+      duration: 3,
+      ease: "easeOut",
+      repeat: Infinity,
+      repeatType: "mirror",
+      repeatDelay: 2,
+    },
+  },
+};
+
+const DescVariants = {
+  initial: {
+    opacity: 0,
+    // scale: 0.98,
+  },
+  animate: (i) => ({
+    opacity: 1,
+    // scale: 1,
+    transition: {
+      duration: 1,
+      delay: i + 1,
+    },
+  }),
+  exit: {
+    opacity: 0,
+    // scale: 0.98,
+  },
+};
 
 const Home = () => {
-  console.log(TransitionVariants);
+  //slider ref and view
+  const sliderRef = SliderWatcher();
+
+  const skillDivs = ["I do this", "I also do THAT", "Then I do this again"].map(
+    (itemText, id) => {
+      return (
+        <DescElement
+          key={id}
+          variants={DescVariants}
+          initial="initial"
+          animate="animate"
+          custom={id}
+          className={`skilldesc ${id}`}
+        >
+          {itemText}
+        </DescElement>
+      );
+    }
+  );
+
   return (
     <StyledHome
       variants={TransitionVariants}
@@ -18,10 +74,17 @@ const Home = () => {
           And I'm a front-end Developer
         </h1>
       </div>
-      <div className="inforight">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos doloremque,
-        assumenda harum saepe dolores explicabo quidem inventore quis fuga amet!
-      </div>
+      <AnimatePresence>
+        <motion.div className="inforight">{skillDivs}</motion.div>
+      </AnimatePresence>
+
+      <TransitionElem
+        ref={sliderRef}
+        variants={TransitionElemVars}
+        animate="animate"
+        initial="initial"
+        // onUpdate={onUpdate}
+      />
     </StyledHome>
   );
 };
@@ -29,6 +92,8 @@ const Home = () => {
 const StyledHome = styled(motion.div)`
   height: 93vh;
   display: flex;
+  position: relative;
+  overflow: hidden;
   .infoleft {
     padding: 10vw;
     padding-top: 8rem;
@@ -36,12 +101,13 @@ const StyledHome = styled(motion.div)`
     background-color: #3f4652;
     display: flex;
     align-items: center;
+    z-index: 10;
     h1 {
       color: white;
       letter-spacing: 3px;
       text-transform: capitalize;
       font-family: "Roboto", sans-serif;
-      font-weight: 500;
+      font-weight: 300;
       font-size: 4.3rem;
       line-height: 5.5rem;
       span {
@@ -53,9 +119,32 @@ const StyledHome = styled(motion.div)`
     }
   }
   .inforight {
+    z-index: 1;
     padding: 10vw;
     flex: 1;
-    background-color: #e44e4e;
+    position: relative;
+    /* background-color: #e44e4e; */
   }
+`;
+const TransitionElem = styled(motion.div)`
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  z-index: 5;
+  background-color: #e44e4e;
+  width: 100vw;
+`;
+
+const DescElement = styled(motion.div)`
+  border: 1px solid green;
+  padding: 2rem;
+  margin-bottom: 2 rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 90%;
+  width: 90%;
+  transform: translate(-50%, -50%);
 `;
 export default Home;

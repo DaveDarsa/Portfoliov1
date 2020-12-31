@@ -6,8 +6,8 @@ import Home from "./pages/Home";
 import ProjectPage from "./pages/ProjectPage";
 //needed modules
 import { Switch, Route, useLocation } from "react-router-dom";
-import { useInView } from "react-intersection-observer";
-import { useAnimation, AnimatePresence } from "framer-motion";
+// import { useInView } from "react-intersection-observer";
+import { AnimatePresence } from "framer-motion";
 
 function App() {
   const location = useLocation();

@@ -19,4 +19,4 @@ export const TransitionVariants = {
   },
 };
 
-export default {};
+export default TransitionVariants;

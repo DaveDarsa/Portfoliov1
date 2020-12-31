@@ -40,6 +40,7 @@ const Nav = () => {
   );
 };
 const StyledLink = styled(Link)`
+  z-index: 50;
   text-decoration: none;
   font-size: 3.5rem;
   display: inline-block;
