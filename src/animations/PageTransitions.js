@@ -18,5 +18,76 @@ export const TransitionVariants = {
     },
   },
 };
-
+//navigation variant
+export const NavVariants = {
+  hidden: {
+    y: -150,
+  },
+  visible: {
+    y: 0,
+    transition: {
+      type: "spring",
+      stiffness: 200,
+      damping: 30,
+    },
+  },
+};
+//right panel description variant
+export const DescVariants = {
+  initial: {
+    opacity: 0,
+    // scale: 0.98,
+  },
+  animate: (i) => ({
+    opacity: 1,
+    // scale: 1,
+    transition: {
+      duration: 1,
+      delay: i + 1,
+    },
+  }),
+  exit: {
+    opacity: 0,
+    // scale: 0.98,
+  },
+};
+//the slider variant
+export const TransitionElemVars = {
+  initial: {
+    x: "-101vw",
+  },
+  animate: {
+    x: "100vw",
+    transition: {
+      type: "spring",
+      duration: 3,
+      delay: 0.3,
+      ease: "easeOut",
+      repeat: Infinity,
+      repeatType: "mirror",
+      repeatDelay: 2,
+    },
+  },
+};
+//skills section
+export const sectionVars = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+    transition: {
+      duration: 0.5,
+    },
+  },
+};
+// //portfolio section
+// export const portVariants = {
+//   hidden: {
+//     filter: "blur(20%)",
+//   },
+//   visible: {
+//     filter: "blur(0)",
+//   },
+// };
 export default TransitionVariants;

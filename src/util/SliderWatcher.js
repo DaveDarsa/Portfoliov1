@@ -32,7 +32,7 @@ const SliderWatcher = () => {
       //a little delay so it transitions well with the moving animation
       setTimeout(() => {
         toggleShowing();
-      }, 300);
+      }, 450);
     }
     //eslint-disable-next-line
   }, [inView]);

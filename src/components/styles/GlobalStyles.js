@@ -13,6 +13,7 @@ const GlobalStyles = createGlobalStyle`
     body{
         font-size:inherit;
         scroll-behavior:smooth;
+        background-color:#f7f7f7;
     }
 
 `;
