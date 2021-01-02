@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import ghicon from "../images/ghLight.png";
 
 const NavVariants = {
   hidden: {
@@ -33,6 +34,11 @@ const Nav = () => {
           </li>
           <li>
             <Link to="/project/1">About</Link>
+          </li>
+          <li>
+            <a href="https://github.com/daveDarsa">
+              <img src={ghicon} alt="github icon" />
+            </a>
           </li>
         </Styledul>
       </div>
@@ -73,15 +79,44 @@ const Styledul = styled.ul`
   margin: 0;
   list-style: none;
   display: flex;
+  align-items: center;
   font-family: "Lato", sans-serif;
   li {
+    position: relative;
     margin-left: 3.5rem;
+    padding-bottom: 0.5rem;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 0%;
+      width: 0;
+      visibility: hidden;
+      background-color: #9ab4c2;
+      padding: 0.1rem;
+      transition: width 500ms cubic-bezier(0.535, -0.355, 0.43, 1.47);
+    }
+    &:hover::after {
+      width: 90%;
+      visibility: visible;
+    }
+    &:last-child::after {
+      content: "";
+      padding: 0;
+    }
     a {
       text-decoration: none;
       color: white;
       text-transform: uppercase;
-      font-size: 1.5rem;
+      font-size: 1.7rem;
       letter-spacing: 2px;
+      transition: all 0.3s ease;
+      position: relative;
+      img {
+        padding-top: 0.1rem;
+        height: 3.5rem;
+      }
     }
   }
 `;

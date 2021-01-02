@@ -70,8 +70,8 @@ const Home = () => {
     >
       <div className="infoleft">
         <h1>
-          Hello, My name is <span>Davit</span>
-          And I'm a front-end Developer
+          Hello, My name is <span>Dave</span>
+          And I'm a front-end Developer.
         </h1>
       </div>
       <AnimatePresence>
@@ -95,32 +95,36 @@ const StyledHome = styled(motion.div)`
   position: relative;
   overflow: hidden;
   .infoleft {
-    padding: 10vw;
+    border-top: 2px solid #9ab4c2;
+    padding: 8vw;
     padding-top: 8rem;
     flex: 1;
     background-color: #3f4652;
     display: flex;
     align-items: center;
+    justify-content: center;
     z-index: 10;
+
     h1 {
       color: white;
       letter-spacing: 3px;
       text-transform: capitalize;
-      font-family: "Roboto", sans-serif;
-      font-weight: 300;
-      font-size: 4.3rem;
-      line-height: 5.5rem;
+      font-family: "Mukta", sans-serif;
+      font-weight: lighter;
+      font-size: 6.5rem;
+      line-height: 9rem;
       span {
         padding-right: 2rem;
-        font-size: 5rem;
+        font-size: 7rem;
         display: inline-block;
         color: #e44e4e;
+        font-weight: 500;
       }
     }
   }
   .inforight {
     z-index: 1;
-    padding: 10vw;
+    padding: 8vw;
     flex: 1;
     position: relative;
     /* background-color: #e44e4e; */
