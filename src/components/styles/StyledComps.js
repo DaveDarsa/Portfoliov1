@@ -39,8 +39,9 @@ export const StyledHome = styled(motion.div)`
     z-index: 1;
     padding: 8vw;
     flex: 1;
-    background-color: #e8e8e8;
+    background-color: #f7f7f7;
     position: relative;
+    border-bottom: 1px solid #3f4652;
     /* background-color: #e44e4e; */
   }
 `;

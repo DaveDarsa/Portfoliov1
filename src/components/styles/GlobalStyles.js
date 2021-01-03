@@ -15,6 +15,11 @@ const GlobalStyles = createGlobalStyle`
         scroll-behavior:smooth;
         background-color:#f7f7f7;
     }
+    svg{
+        height:20rem;
+        width:20rem;
+        
+    }
 
 `;
 
