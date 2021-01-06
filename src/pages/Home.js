@@ -51,8 +51,9 @@ const Home = () => {
       >
         <div className="infoleft">
           <h1>
-            Hello, My name is <span>Dave</span>
-            And I'm a front-end Developer.
+            Hello,<span>Dave</span>here.
+            <br />
+            I'm a front-end Developer.
           </h1>
         </div>
         <AnimatePresence>

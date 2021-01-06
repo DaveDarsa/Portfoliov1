@@ -27,8 +27,8 @@ export const StyledHome = styled(motion.div)`
       font-size: 6.5rem;
       line-height: 9rem;
       span {
-        padding-right: 2rem;
         font-size: 7rem;
+        padding: 0 1rem;
         display: inline-block;
         color: #e44e4e;
         font-weight: 500;
@@ -144,5 +144,138 @@ export const Styledul = styled.ul`
         height: 3.5rem;
       }
     }
+  }
+`;
+//reusable line for skills section
+export const Line = styled.div`
+  width: 70%;
+  height: 0.3rem;
+  margin: 2rem auto;
+  border-radius: 2rem;
+  background-color: ${(props) => {
+    return props.color;
+  }};
+`;
+//skills section styling
+export const StyledSkills = styled(motion.div)`
+  padding: 15rem;
+  padding-top: 5rem;
+  padding-bottom: 50rem;
+  /* background-color: #23323a; */
+  background-color: #323841;
+  .aboutme {
+    font-size: 2.1rem;
+    line-height: 3.5rem;
+    text-transform: none;
+    font-family: "Mukta", sans-serif;
+    margin-top: 2.5rem;
+    font-weight: 400;
+    color: #e9eff2;
+    span {
+      color: #e44e4e;
+    }
+  }
+  .skillset {
+    display: flex;
+    margin-top: 5rem;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    .desc {
+      margin-bottom: 5rem;
+      font-family: "Roboto", sans-serif;
+      letter-spacing: 0.5rem;
+      word-spacing: -0.2rem;
+      color: white;
+      font-size: 4rem;
+      /* side by side design */
+      /* flex-basis: 45%; */
+      /* padding-left: 5rem; */
+      /* display: flex; */
+      /* align-items: center;
+    justify-content: space-evenly; */
+      span {
+        /* display: inline-block; */
+        display: block;
+        margin-top: 1.5rem;
+        width: 120%;
+        transform: translateX(-10%);
+        height: 0.4rem;
+        border-radius: 2rem;
+        background-color: #e44e4e;
+      }
+    }
+  }
+  .skillsetIcons {
+    width: 80%;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+
+    & > * {
+      filter: contrast(100%);
+      transition: filter 0.2s ease;
+      cursor: pointer;
+    }
+    & > *:hover {
+      filter: contrast(120%);
+    }
+    & > div > svg {
+      width: 18rem;
+      height: 18rem;
+    }
+    .logobox {
+      text-align: center;
+      p {
+        color: #f7f7f7;
+        font-size: 2rem;
+        line-height: 3rem;
+        max-width: fit-content;
+        word-wrap: break-word;
+      }
+
+      &:last-of-type svg {
+        transform: translateX(2.5rem);
+      }
+    }
+  }
+  h2 {
+    font-family: "Roboto", sans-serif;
+    color: #f7f7f7;
+    letter-spacing: 2.5px;
+    text-align: center;
+    font-size: 4rem;
+  }
+  .otherskills {
+    margin-top: 2rem;
+    border: 5px solid green;
+    padding: 10rem 15rem;
+    display: flex;
+    justify-content: space-between;
+    h4 {
+      flex-basis: 45%;
+      font-size: 1.8rem;
+      color: #f7f7f7;
+    }
+    .skilllist {
+      flex-basis: 55%;
+      font-size: 2rem;
+      color: #f7f7f7;
+    }
+    .skillitem {
+      border: 2px solid green;
+
+      .skillicon {
+      }
+      .skillname {
+      }
+    }
+  }
+
+  .languages,
+  .futuregoals {
+    padding: 5rem 15rem;
+    color: #f7f7f7;
   }
 `;
