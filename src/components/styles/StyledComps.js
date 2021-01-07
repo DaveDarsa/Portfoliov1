@@ -158,17 +158,14 @@ export const Line = styled.div`
 `;
 //skills section styling
 export const StyledSkills = styled(motion.div)`
-  padding: 15rem;
-  padding-top: 5rem;
-  padding-bottom: 50rem;
-  /* background-color: #23323a; */
+  padding: 10rem;
   background-color: #323841;
   .aboutme {
     font-size: 2.1rem;
     line-height: 3.5rem;
     text-transform: none;
     font-family: "Mukta", sans-serif;
-    margin-top: 2.5rem;
+    margin-top: 5rem;
     font-weight: 400;
     color: #e9eff2;
     span {
@@ -210,7 +207,7 @@ export const StyledSkills = styled(motion.div)`
     width: 80%;
     overflow: hidden;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: baseline;
 
     & > * {
@@ -228,9 +225,10 @@ export const StyledSkills = styled(motion.div)`
     .logobox {
       text-align: center;
       p {
-        color: #f7f7f7;
+        color: #eaeaea;
         font-size: 2rem;
         line-height: 3rem;
+        letter-spacing: 0.05rem;
         max-width: fit-content;
         word-wrap: break-word;
       }
@@ -248,34 +246,116 @@ export const StyledSkills = styled(motion.div)`
     font-size: 4rem;
   }
   .otherskills {
-    margin-top: 2rem;
-    border: 5px solid green;
-    padding: 10rem 15rem;
+    margin-top: 5rem;
+    padding: 5rem 20rem;
+    padding-bottom: 0;
     display: flex;
     justify-content: space-between;
-    h4 {
-      flex-basis: 45%;
-      font-size: 1.8rem;
-      color: #f7f7f7;
+    align-items: baseline;
+    .flexgroup {
+      flex-basis: 35%;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+
+      h4 {
+        flex-basis: 35%;
+        font-size: 2rem;
+        letter-spacing: 0.1rem;
+        color: #eaeaea;
+      }
+      span {
+        display: block;
+        width: 30%;
+        height: 0.4rem;
+        border-radius: 2rem;
+        background-color: #e44e4e;
+      }
     }
+
     .skilllist {
-      flex-basis: 55%;
+      flex-basis: 65%;
       font-size: 2rem;
-      color: #f7f7f7;
+      display: flex;
+      justify-content: space-evenly;
     }
     .skillitem {
-      border: 2px solid green;
+      width: 10%;
+      height: 12rem;
+      display: flex;
+      color: #c4c4c4;
+      flex-direction: column;
+      justify-content: space-evenly;
+      .css svg {
+        transform: translateX(-10%);
+      }
 
       .skillicon {
+        display: block;
+        margin: 0 auto;
+        width: 90%;
+
+        & > * {
+          display: block;
+          width: 80%;
+          margin: 0 auto;
+          height: 50px;
+        }
       }
       .skillname {
+        text-align: center;
+        font-weight: 500;
+        color: #eaeaea;
+        font-size: 1.8rem;
+      }
+
+      &.styled .skillname {
+        font-size: 1.5rem;
+      }
+      &.styled .skillicon {
+        margin: 2rem auto 1rem;
+        width: 30%;
+      }
+      .framer {
+        font-size: 1.5rem;
       }
     }
   }
 
   .languages,
   .futuregoals {
-    padding: 5rem 15rem;
-    color: #f7f7f7;
+    padding: 5rem 20rem;
+    color: #eaeaea;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-evenly;
+    .flexgroup {
+      display: flex;
+      flex-basis: 35%;
+      align-items: center;
+      justify-content: space-evenly;
+
+      h4 {
+        flex-basis: 35%;
+        font-size: 2rem;
+        letter-spacing: 0.1rem;
+        color: #eaeaea;
+      }
+
+      span {
+        display: block;
+        width: 30%;
+        height: 0.4rem;
+        border-radius: 2rem;
+        background-color: #e44e4e;
+      }
+    }
+    div {
+      flex-basis: 65%;
+      font-size: 2rem;
+      p {
+        padding-left: 5%;
+      }
+    }
   }
 `;
