@@ -9,7 +9,12 @@ const Portfolio = () => {
   const [portRef, animToUse] = SectionAnims();
 
   return (
-    <StyledPortfolio ref={portRef} animate={animToUse} variants={sectionVars}>
+    <StyledPortfolio
+      id="portfolio"
+      ref={portRef}
+      animate={animToUse}
+      variants={sectionVars}
+    >
       Projects
     </StyledPortfolio>
   );

@@ -1,11 +1,16 @@
 import React from "react";
 import { NavVariants } from "../animations/PageTransitions";
-import { Link } from "react-router-dom";
 import ghicon from "../images/ghLight.png";
 
 //styled components
 import { StyledLink, StyledNav, Styledul } from "./styles/StyledComps";
+import { scrollTo } from "../util/ScrollTop";
 const Nav = () => {
+  const scrollToSection = (e, location) => {
+    e.preventDefault();
+    e.stopPropagation();
+    scrollTo(location);
+  };
   return (
     <StyledNav variants={NavVariants} initial="hidden" animate="visible">
       <div className="logoBox">
@@ -14,13 +19,17 @@ const Nav = () => {
       <div className="menuItems">
         <Styledul>
           <li>
-            <a href="#skills">Skills</a>
+            <button onClick={(e) => scrollToSection(e, "about")}>About</button>
           </li>
           <li>
-            <a href="#portfolio">Portfolio</a>
+            <button onClick={(e) => scrollToSection(e, "portfolio")}>
+              Portfolio
+            </button>
           </li>
           <li>
-            <Link to="/project/1">About</Link>
+            <button onClick={(e) => scrollToSection(e, "contact")}>
+              Contact
+            </button>
           </li>
           <li>
             <a href="https://github.com/daveDarsa">

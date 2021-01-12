@@ -131,7 +131,12 @@ export const Styledul = styled.ul`
       content: "";
       padding: 0;
     }
-    a {
+    a,
+    button {
+      background-color: transparent;
+      border: none;
+      outline: none;
+      cursor: pointer;
       text-decoration: none;
       color: white;
       text-transform: uppercase;

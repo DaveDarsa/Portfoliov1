@@ -20,7 +20,12 @@ const SkillSection = () => {
   const [skillRef, animToUse] = SectionAnims();
 
   return (
-    <StyledSkills ref={skillRef} animate={animToUse} variants={sectionVars}>
+    <StyledSkills
+      ref={skillRef}
+      animate={animToUse}
+      variants={sectionVars}
+      id="about"
+    >
       <h2 className="title">Get to know me</h2>
       <h2 className="aboutme">
         My name is <span>Davit Darsavelidze</span>. I'm from Tbilisi, Georgia.
