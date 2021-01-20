@@ -29,12 +29,10 @@ const SliderWatcher = () => {
   //Toggle the components ONCE each time the slider is in view
   useEffect(() => {
     if (inView) {
-      console.log("SHOWING");
-
       //a little delay so it transitions well with the moving animation
       setTimeout(() => {
         toggleShowing();
-      }, 350);
+      }, 370);
     }
     //eslint-disable-next-line
   }, [inView]);

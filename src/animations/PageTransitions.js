@@ -60,12 +60,12 @@ export const TransitionElemVars = {
     x: "101vw",
     transition: {
       type: "spring",
-      duration: 3,
+      duration: 2.8,
       delay: 0.25,
       ease: "linear",
       repeat: Infinity,
       repeatType: "mirror",
-      repeatDelay: 2,
+      repeatDelay: 3.5,
     },
   },
 };

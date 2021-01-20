@@ -11,7 +11,9 @@ import { motion, AnimatePresence } from "framer-motion";
 //component styles
 import {
   StyledHome,
-  DescElement,
+  StyledSlideOne,
+  StyledSlideTwo,
+  StyledSlideThree,
   TransitionElem,
 } from "../components/styles/StyledComps";
 
@@ -19,11 +21,15 @@ import {
 import SliderWatcher from "../util/SliderWatcher";
 import SkillSection from "../components/SkillSection";
 import Portfolio from "../components/Portfolio";
+import { scrollTo } from "../util/ScrollTop";
 //images
-import clean from "../images/clean-code.svg";
-import efficient from "../images/bar-graph.svg";
-import scalable from "../images/scalable.svg";
-import maintainable from "../images/optimize.svg";
+import clean from "../images/clean.svg";
+import efficient from "../images/speedometer.svg";
+import scalable from "../images/scale.svg";
+import maintainable from "../images/optimized.svg";
+//fonts
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 
 const Home = () => {
   //slider ref and initialization
@@ -46,14 +52,16 @@ const Home = () => {
         </div>
         <AnimatePresence>
           <motion.div className="inforight">
-            <DescElement
+            <StyledSlideOne
               variants={DescVariants}
               initial="initial"
               animate="animate"
               className={`skilldesc ${0}`}
               custom={0}
             >
-              <h2>My Code Is</h2>
+              <h2>
+                My <span>Code </span>Is
+              </h2>
               <div className="descbox">
                 <div className="desc__top">
                   <div className="clean">
@@ -84,25 +92,67 @@ const Home = () => {
                   </div>
                 </div>
               </div>
-            </DescElement>
-            <DescElement
+            </StyledSlideOne>
+
+            <StyledSlideTwo
               variants={DescVariants}
               initial="initial"
               animate="animate"
               className={`skilldesc ${1}`}
               custom={1}
             >
-              second
-            </DescElement>
-            <DescElement
+              <p>
+                I'm always <span>learning</span> and <span>improving</span>.
+                Want to see what projects I've done recently?
+                <button
+                  onClick={(e) => {
+                    scrollTo("portfolio");
+                  }}
+                >
+                  Right This Way <br />
+                  <FontAwesomeIcon
+                    icon={faArrowDown}
+                    style={{
+                      fontSize: "1.5rem",
+                      padding: 0,
+                      margin: 0,
+                    }}
+                  />
+                </button>
+              </p>
+            </StyledSlideTwo>
+            <StyledSlideThree
               variants={DescVariants}
               initial="initial"
               animate="animate"
               className={`skilldesc ${2}`}
               custom={2}
             >
-              third
-            </DescElement>
+              <h2>What am I up to?</h2>
+              <p>
+                I'm usually freelancing or tending to my side projects. If
+                you've got a question or want to reach out find me on
+                <a href="https://github.com/daveDarsa">Github</a>
+                or send me an email from the form down below
+                <br />
+              </p>
+              <button
+                onClick={(e) => {
+                  scrollTo("contact");
+                }}
+              >
+                Send me an email
+                <br />
+                <FontAwesomeIcon
+                  icon={faArrowDown}
+                  style={{
+                    fontSize: "1.5rem",
+                    padding: 0,
+                    margin: 0,
+                  }}
+                />
+              </button>
+            </StyledSlideThree>
           </motion.div>
         </AnimatePresence>
         <TransitionElem

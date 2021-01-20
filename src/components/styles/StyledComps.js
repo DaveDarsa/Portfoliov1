@@ -44,6 +44,12 @@ export const StyledHome = styled(motion.div)`
     position: relative;
     border-bottom: 1px solid #3f4652;
     /* background-color: #e44e4e; */
+    h2 {
+      transform: translateX(-0.2vw);
+    }
+    span {
+      color: #e44e4e;
+    }
   }
 `;
 
@@ -56,7 +62,7 @@ export const TransitionElem = styled(motion.div)`
   background-color: #e44e4e;
   width: 100vw;
 `;
-export const DescElement = styled(motion.div)`
+export const StyledSlideOne = styled(motion.div)`
   box-sizing: border-box;
   padding: 2rem;
   margin-bottom: 2 rem;
@@ -90,7 +96,6 @@ export const DescElement = styled(motion.div)`
       display: block;
       width: 100%;
       height: 100%;
-      filter: grayscale(0.35);
     }
   }
   .descbox {
@@ -136,7 +141,88 @@ export const DescElement = styled(motion.div)`
     }
   }
 `;
+export const StyledSlideTwo = styled(motion.div)`
+  display: flex;
+  align-items: center;
+  height: 100%;
+  p {
+    text-align: center;
+    color: #3f4652;
+    font-weight: 550;
+    padding: 5rem;
+    font-size: 4rem;
+    font-family: "Mukta", sans-serif;
+    span {
+      font-weight: 550;
+      color: #e44e4e;
+    }
+  }
 
+  button {
+    border: 2px solid #9ab4c2;
+    padding: 1rem 2.5rem;
+    outline: none;
+    background-color: #3f4652;
+    color: #fff;
+    text-transform: capitalize;
+    font-size: 2.5rem;
+    text-align: center;
+    cursor: pointer;
+    display: block;
+    margin: 1.5rem auto;
+    transition: color 0.3s, border-color 0.3s;
+    &:hover {
+      color: #e44e4e;
+      border-color: #e44e4e;
+    }
+  }
+`;
+export const StyledSlideThree = styled(motion.div)`
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  text-align: center;
+  font-family: "Mukta", sans-serif;
+  color: #3f4652;
+  h2 {
+    font-size: 5rem;
+  }
+  p {
+    margin-top: -0.5rem;
+    padding: 1.5rem 10rem;
+    font-size: 2.65rem;
+    font-weight: 550;
+  }
+  a:link,
+  a:active,
+  a:visited {
+    padding: 0 0.5rem;
+    display: inline-block;
+    text-decoration: none;
+    color: #db4d4e;
+  }
+
+  button {
+    margin-top: 2.5rem;
+    border: 2px solid #9ab4c2;
+    padding: 1rem 2.5rem;
+    outline: none;
+    background-color: #3f4652;
+    color: #fff;
+    text-transform: capitalize;
+    font-size: 2.5rem;
+    text-align: center;
+    cursor: pointer;
+    display: block;
+    margin: 1.5rem auto;
+    transition: color 0.3s, border-color 0.3s;
+    &:hover {
+      color: #e44e4e;
+      border-color: #e44e4e;
+    }
+  }
+`;
 export const StyledLink = styled(Link)`
   z-index: 50;
   text-decoration: none;
