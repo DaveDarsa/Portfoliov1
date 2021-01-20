@@ -36,17 +36,17 @@ const JsVariant = {
 const R1Variant = {
   hidden: {
     pathLength: 0,
-    fill: "transparent",
+    fill: "rgba(0,0,0,0)",
     stroke: "#53C1DE",
   },
   visible: {
     pathLength: 1,
-    fill: "#53C1DE ",
-    stroke: "transparent",
+    fill: "#53C1DE",
+    stroke: "rgba(0,0,0,0)",
 
     transition: {
       fill: {
-        duration: 1,
+        duration: 1.2,
         delay: 1,
         ease: "easeInOut",
       },
@@ -63,13 +63,13 @@ const R1Variant = {
 const R2Variant = {
   hidden: {
     pathLength: 0,
-    fill: "#323841 ",
+    fill: "#323841",
     stroke: "#53C1DE",
   },
   visible: {
     pathLength: 1,
     fill: "#323841",
-    stroke: "transparent",
+    stroke: "rgba(0,0,0,0)",
     transition: {
       fill: {
         duration: 1,
@@ -88,33 +88,33 @@ const R2Variant = {
 const SassVariant = {
   hidden: {
     pathLength: 0,
-    fill: "rgba(0,0,0,0) ",
+    fill: "rgba(0,0,0,0)",
   },
   visible: {
     pathLength: 1,
-    fill: "#CF649A ",
+    fill: "#CF649A",
     transition: {
       fill: {
         duration: 1,
         delay: 1.5,
       },
       duration: 1.8,
-      ease: "easeIn",
+      ease: "easeInOut",
     },
   },
 };
 const H1Variant = {
   hidden: {
     pathLength: 0,
-    fill: "rgba(0,0,0,0) ",
+    fill: "rgba(0,0,0,0)",
   },
   visible: {
     pathLength: 1,
-    fill: "#E44D26 ",
+    fill: "#E44D26",
     transition: {
       fill: {
         duration: 2,
-        delay: 1,
+        delay: 1.5,
       },
       duration: 2,
       ease: "circInOut",
@@ -124,15 +124,15 @@ const H1Variant = {
 const H2Variant = {
   hidden: {
     pathLength: 0,
-    fill: "rgba(0,0,0,0) ",
+    fill: "rgba(0,0,0,0)",
   },
   visible: {
     pathLength: 1,
-    fill: "#F16529 ",
+    fill: "#F16529",
     transition: {
       fill: {
         duration: 2,
-        delay: 1,
+        delay: 1.5,
       },
       duration: 2,
       ease: "circInOut",
@@ -142,15 +142,15 @@ const H2Variant = {
 const H3Variant = {
   hidden: {
     pathLength: 0,
-    fill: "rgba(0,0,0,0) ",
+    fill: "rgba(0,0,0,0)",
   },
   visible: {
     pathLength: 1,
-    fill: "#ebebeb ",
+    fill: "#ebebeb",
     transition: {
       fill: {
         duration: 2,
-        delay: 1,
+        delay: 1.5,
       },
       duration: 2,
       ease: "circInOut",
@@ -160,7 +160,7 @@ const H3Variant = {
 const H4Variant = {
   hidden: {
     pathLength: 0,
-    fill: "rgba(0,0,0,0) ",
+    fill: "rgba(0,0,0,0)",
   },
   visible: {
     pathLength: 1,
@@ -168,19 +168,21 @@ const H4Variant = {
     transition: {
       fill: {
         duration: 2,
-        delay: 1,
+        delay: 1.2,
       },
       duration: 2,
       ease: "circInOut",
     },
   },
 };
-const JsIcon = () => {
+const JsIcon = (props) => {
+  // console.log(props.anim);
   return (
     <motion.svg
       variants={sVariant}
+      animate={props.anim}
       initial="hidden"
-      animate="visible"
+      // animate={anim}
       viewBox="0 0 256 256"
       xmlns="http://www.w3.org/2000/svg"
       preserveAspectRatio="xMinYMin meet"
@@ -198,12 +200,12 @@ const JsIcon = () => {
 
 //react icon
 
-export const ReactIcon = () => {
+export const ReactIcon = (props) => {
   return (
     <motion.svg
       variants={sVariant}
+      animate={props.anim}
       initial="hidden"
-      animate="visible"
       viewBox="0 0 256 230"
       xmlns="http://www.w3.org/2000/svg"
       preserveAspectRatio="xMinYMin meet"
@@ -237,12 +239,12 @@ export const ReactIcon = () => {
 };
 
 //sass
-export const SassIcon = () => {
+export const SassIcon = (props) => {
   return (
     <motion.svg
       variants={sVariant}
+      animate={props.anim}
       initial="hidden"
-      animate="visible"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 512 384"
     >
@@ -257,12 +259,12 @@ export const SassIcon = () => {
 };
 
 //HTml icon
-export const HtmlIcon = () => {
+export const HtmlIcon = (props) => {
   return (
     <motion.svg
       variants={sVariant}
+      animate={props.anim}
       initial="hidden"
-      animate="visible"
       viewBox="0 0 256 361"
       xmlns="http://www.w3.org/2000/svg"
       preserveAspectRatio="xMinYMin meet"
@@ -314,7 +316,7 @@ export const Materialize = () => {
       preserveAspectRatio="xMidYMid"
     >
       <g>
-        <g stroke-width="0.09375">
+        <g strokeWidth="0.09375">
           <path
             d="M63.1816647,4.19975875 C64.108082,2.62484922 65.3124246,1.11170084 67.041737,0.370566948 C67.7519903,0.247044632 68.4622437,0.30880579 69.172497,0.30880579 L104.129312,0.30880579 C103.110253,1.173462 102.122075,2.06899879 101.442702,3.2424608 C99.6516285,6.1761158 98.4472859,9.44945718 97.335585,12.7227986 C94.185766,22.6045838 91.9932449,32.7642943 89.8624849,42.9240048 C88.905187,47.5252111 87.9787696,52.1572979 87.1141134,56.7585042 C84.4583836,71.8282268 81.7100121,86.8670688 78.2822678,101.782388 C76.6455971,108.668758 74.9780458,115.555127 72.4458384,122.194451 C71.2723764,124.942823 70.1297949,127.876478 67.8755127,129.914596 C67.3505428,130.377805 66.825573,130.964536 66.0844391,130.871894 L35.2038601,130.871894 C33.1039807,130.810133 31.0349819,130.995416 28.9351025,130.779252 C30.3247286,129.698432 31.5599517,128.401448 32.3628468,126.857419 C34.6788902,122.441496 36.1302774,117.655006 37.5199035,112.899397 C39.681544,105.241013 41.4108565,97.4899879 43.0475271,89.7389626 C44.0665862,84.6436671 45.2709288,79.5792521 46.0120627,74.453076 C46.8458384,68.7401689 48.1119421,63.0890229 49.1310012,57.4069964 C50.7367913,49.0383595 52.4352232,40.6697226 54.3189385,32.3628468 C55.8320869,25.8779252 57.3761158,19.4238842 59.4451146,13.0933655 C60.4641737,10.0361882 61.5758745,7.00989144 63.1816647,4.19975875 Z"
             stroke="#EB7077"
@@ -432,7 +434,7 @@ export const StyledIcon = () => {
       height="50px"
     >
       <g fill="none" fill-rule="evenodd">
-        <use stroke="#4A4A4A" stroke-width="8" mask="url(#b)" s />
+        <use stroke="#4A4A4A" strokeWidth="8" mask="url(#b)" s />
 
         <text
           fill="#000"
@@ -483,7 +485,7 @@ export const GitLogo = () => {
       x="0px"
       y="0px"
       viewBox="0 0 97 97"
-      enable-background="new 0 0 97 97"
+      enableBackground="new 0 0 97 97"
     >
       <g>
         <path

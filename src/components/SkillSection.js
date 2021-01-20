@@ -18,7 +18,7 @@ import JsIcon, {
 
 const SkillSection = () => {
   const [skillRef, animToUse] = SectionAnims();
-
+  const [skills, anim] = SectionAnims("skills");
   return (
     <StyledSkills
       ref={skillRef}
@@ -37,9 +37,9 @@ const SkillSection = () => {
         <h3 className="desc">
           Skillset <span></span>
         </h3>
-        <div className="skillsetIcons">
+        <div className="skillsetIcons" ref={skills}>
           <div className="logobox">
-            <JsIcon />
+            <JsIcon anim={anim} />
             <Line color="#F7DF1E" />
             <p>
               Over 5 years of experience and deep understanding of JavaScript.
@@ -47,7 +47,7 @@ const SkillSection = () => {
             </p>
           </div>
           <div className="logobox">
-            <ReactIcon />
+            <ReactIcon anim={anim} />
             <Line color="#53C1DE" />
             <p>
               3+ years of experience with creating performant,maintainable and
@@ -55,7 +55,7 @@ const SkillSection = () => {
             </p>
           </div>
           <div className="logobox">
-            <SassIcon />
+            <SassIcon anim={anim} />
             <Line color="#CF649A" />
             <p>
               Pixel perfect implementation of a given design. One can't have CSS
@@ -63,7 +63,7 @@ const SkillSection = () => {
             </p>
           </div>
           <div className="logobox">
-            <HtmlIcon />
+            <HtmlIcon anim={anim} />
             <Line color="#E44D26" />
             <p>
               Building properly structured websites. Oftentimes using the BEM

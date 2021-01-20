@@ -57,12 +57,12 @@ export const TransitionElemVars = {
     x: "-101vw",
   },
   animate: {
-    x: "100vw",
+    x: "101vw",
     transition: {
       type: "spring",
       duration: 3,
-      delay: 0.3,
-      ease: "easeOut",
+      delay: 0.25,
+      ease: "linear",
       repeat: Infinity,
       repeatType: "mirror",
       repeatDelay: 2,
