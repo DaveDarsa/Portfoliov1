@@ -38,6 +38,7 @@ const Home = () => {
   return (
     <>
       <StyledHome
+        className="infos"
         variants={TransitionVariants}
         animate="visible"
         initial="initial"

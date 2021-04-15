@@ -7,6 +7,7 @@ export const StyledHome = styled(motion.div)`
   display: flex;
   position: relative;
   overflow: hidden;
+
   .infoleft {
     border-top: 2px solid #9ab4c2;
     padding: 8vw;
