@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.js": "/static/js/main.f711989e.chunk.js",
+    "main.js.map": "/static/js/main.f711989e.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.2fd7dc15.js",
+    "runtime-main.js.map": "/static/js/runtime-main.2fd7dc15.js.map",
+    "static/js/2.708aebf1.chunk.js": "/static/js/2.708aebf1.chunk.js",
+    "static/js/2.708aebf1.chunk.js.map": "/static/js/2.708aebf1.chunk.js.map",
+    "index.html": "/index.html",
+    "static/js/2.708aebf1.chunk.js.LICENSE.txt": "/static/js/2.708aebf1.chunk.js.LICENSE.txt",
+    "static/media/clean.455bebca.svg": "/static/media/clean.455bebca.svg",
+    "static/media/customgif.4c747e19.gif": "/static/media/customgif.4c747e19.gif",
+    "static/media/customimg.b68cc2b8.png": "/static/media/customimg.b68cc2b8.png",
+    "static/media/nanogif.de8f75c5.gif": "/static/media/nanogif.de8f75c5.gif",
+    "static/media/nanoproject.3f161ede.png": "/static/media/nanoproject.3f161ede.png",
+    "static/media/npmimage.9411f0aa.png": "/static/media/npmimage.9411f0aa.png",
+    "static/media/optimized.392f1ecc.svg": "/static/media/optimized.392f1ecc.svg",
+    "static/media/scale.3122ecb0.svg": "/static/media/scale.3122ecb0.svg",
+    "static/media/speedometer.e8b6f58a.svg": "/static/media/speedometer.e8b6f58a.svg",
+    "static/media/worksmartgif.045790af.gif": "/static/media/worksmartgif.045790af.gif",
+    "static/media/worksmartpic.7ae9d1b0.png": "/static/media/worksmartpic.7ae9d1b0.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2fd7dc15.js",
+    "static/js/2.708aebf1.chunk.js",
+    "static/js/main.f711989e.chunk.js"
+  ]
+}
