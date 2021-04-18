@@ -32,7 +32,7 @@ const Nav = () => {
             </button>
           </li>
           <li>
-            <a href="https://github.com/daveDarsa">
+            <a href="https://github.com/daveDarsa" target="blank">
               <img src={ghicon} alt="github icon" />
             </a>
           </li>
