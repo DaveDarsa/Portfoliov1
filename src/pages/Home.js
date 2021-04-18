@@ -110,7 +110,7 @@ const Home = () => {
                     scrollTo("portfolio");
                   }}
                 >
-                  Right This Way <br />
+                  Right This Way
                   <FontAwesomeIcon
                     icon={faArrowDown}
                     style={{
@@ -135,7 +135,6 @@ const Home = () => {
                 you've got a question or want to reach out find me on
                 <a href="https://github.com/daveDarsa">Github</a>
                 or send me an email from the form down below
-                <br />
               </p>
               <button
                 onClick={(e) => {

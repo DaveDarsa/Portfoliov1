@@ -160,16 +160,28 @@ export const StyledSlideTwo = styled(motion.div)`
   }
 
   button {
-    border: 2px solid #9ab4c2;
-    padding: 1rem 2.5rem;
+    all: unset;
+    border: 1px solid transparent;
+    padding: 0.8rem 1.5rem;
+    border-radius: 1rem;
+    font-family: inherit;
     outline: none;
-    background-color: #3f4652;
-    color: #fff;
+    background-color: rgb(63, 70, 82);
+    color: rgb(255, 255, 255);
     text-transform: capitalize;
     font-size: 2.5rem;
     text-align: center;
     cursor: pointer;
     display: block;
+    margin: 1.5rem auto;
+    transition: color 0.3s ease 0s, border-color 0.3s ease 0s;
+    text-transform: capitalize;
+    font-size: 2.5rem;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: 1.5rem auto;
     transition: color 0.3s, border-color 0.3s;
     &:hover {
@@ -205,19 +217,33 @@ export const StyledSlideThree = styled(motion.div)`
   }
 
   button {
-    margin-top: 2.5rem;
-    border: 2px solid #9ab4c2;
-    padding: 1rem 2.5rem;
+    all: unset;
+    border: 1px solid transparent;
+    padding: 0.8rem 1.5rem;
+    border-radius: 1rem;
+    font-family: inherit;
     outline: none;
-    background-color: #3f4652;
-    color: #fff;
+    background-color: rgb(63, 70, 82);
+    color: rgb(255, 255, 255);
     text-transform: capitalize;
     font-size: 2.5rem;
     text-align: center;
     cursor: pointer;
     display: block;
     margin: 1.5rem auto;
+    transition: color 0.3s ease 0s, border-color 0.3s ease 0s;
+    text-transform: capitalize;
+    font-size: 2.5rem;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1.5rem auto;
     transition: color 0.3s, border-color 0.3s;
+    /* svg {
+      display: block;
+    } */
     &:hover {
       color: #e44e4e;
       border-color: #e44e4e;
