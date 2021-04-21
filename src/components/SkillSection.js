@@ -29,7 +29,7 @@ const SkillSection = () => {
       <h2 className="title">Get to know me</h2>
       <h2 className="aboutme">
         My name is <span>Davit Darsavelidze</span>. I'm from Tbilisi, Georgia.
-        I've primarily been a JavaScript developer for 5+ years and counting. I
+        I've primarily been a JavaScript developer for 3+ years and counting. I
         enjoy tackling and understanding the challenging parts of the language.
         I'm obsessed with creating user-friendly interfaces with React.js
       </h2>
@@ -42,16 +42,17 @@ const SkillSection = () => {
             <JsIcon anim={anim} />
             <Line color="#F7DF1E" />
             <p>
-              Over 5 years of experience and deep understanding of JavaScript.
-              Up to date with all the Es6+ concepts
+              Over 3 years of professional experience and deep understanding of
+              JavaScript. Up to date with all the Es6+ concepts
             </p>
           </div>
           <div className="logobox">
             <ReactIcon anim={anim} />
             <Line color="#53C1DE" />
             <p>
-              3+ years of experience with creating performant,maintainable and
-              scalable web apps with React, Context API and Redux
+              2 years of professional experience with creating
+              performant,maintainable and scalable web apps with React, Context
+              API and Redux
             </p>
           </div>
           <div className="logobox">
